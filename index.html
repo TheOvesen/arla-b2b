@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/fonts.css"> <!-- Fonts code borrowed from RACE's github upload -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/arla_logo.png">
+  <title>Arlagården - Results</title>
+</head>
+
+<body class="container">
+  <nav class="sidebar">
+    <a href="#" class="sidebar_logo"><img src="img/arla_logo.png" alt="Arla logo"></a>
+    <a href="#" class="sidebar_button_active light">SURVEY</a>
+    <a href="#" class="sidebar_button light">COMPARE</a>
+    <a href="#" class="sidebar_button light">PROGRESS</a>
+    <a href="#" class="sidebar_button light">TIPS</a>
+  </nav>
+
+  <nav class="header_mobile">
+    <a href="#" class="mobile_logo"><img src="img/arla_logo.png" alt="Arla logo"></a>
+    <div class="mobile_menu">
+      <p class="mobile_menu_button">≡</p>
+      <div class="burger_menu">
+        <a href="#" class="sidebar_button_active light">SURVEY</a>
+        <a href="#" class="sidebar_button light">COMPARE</a>
+        <a href="#" class="sidebar_button light">PROGRESS</a>
+        <a href="#" class="sidebar_button light">TIPS</a>
+      </div>
+    </div>
+    <div class="mobile_portrait">
+      <img src="img/portrait.png" alt="">
+    </div>
+  </nav>
+
+  <main class="page_content">
+    <header class="page_header">
+      <div class="page_portrait">
+        <img src="img/portrait.png" alt="">
+      </div>
+
+      <h1>Results - Survey 2019</h1>
+    </header>
+
+    <section class="page_tips">
+      <div class="tips_container">
+        <div class="tips_element">
+          <div class="tips_icon_container">
+            <img src="img/tips-milk.png" alt="" class="tips_icon">
+          </div>
+          <p class="tips_text">Your milk production has increased by 4% since last year. Congratulations!</p>
+          <div class="tips_icon_container">
+            <p class="info_icon">i</p>
+          </div>
+        </div>
+        <div class="tips_element">
+          <div class="tips_icon_container">
+            <img src="img/tips-fuel.png" alt="" class="tips_icon">
+          </div>
+          <p class="tips_text">Your diesel consumption seems to have increased by 11% compared to 2018. The cause might be that you bought another vehicle, thus the higher consumption.</p>
+          <div class="tips_icon_container">
+            <p class="info_icon">i</p>
+          </div>
+        </div>
+        <div class="tips_element">
+          <div class="tips_icon_container">
+            <img src="img/tips-elec.png" alt="" class="tips_icon">
+          </div>
+          <p class="tips_text">The electricity usage for 2019 seems to have decreased compared to 2018. Good job!</p>
+          <div class="tips_icon_container">
+            <p class="info_icon">i</p>
+          </div>
+        </div>
+        <div class="tips_element">
+          <div class="tips_icon_container">
+            <img src="img/tips-cow.png" alt="" class="tips_icon">
+          </div>
+          <p class="tips_text">The feed consumption of dry matter for all your cows has increased by 7%, which might be because you have more cows now than you did in 2018.</p>
+          <div class="tips_icon_container">
+            <p class="info_icon">i</p>
+          </div>
+        </div>
+        <div class="tips_element">
+          <div class="tips_icon_container">
+            <img src="img/tips-co2.png" alt="" class="tips_icon">
+          </div>
+          <p class="tips_text">The CO2 in total for 2019 is a lot lower than in 2018, by around 25%, which means you are doing a really good job at saving the environment!</p>
+          <div class="tips_icon_container">
+            <p class="info_icon">i</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page_chart">
+      <p class="chart_title">Your CO2 footprint this year</p>
+      <div class="chart_container">
+        <canvas id="data_chart" height="200"></canvas>
+      </div>
+    </section>
+
+    <footer class="page_footer">
+      <div class="footer_savings">
+        <p>By reducing CO2, <br>for 2019 you managed to save: </p>
+        <div class="footer_block">
+          <img src="img/coins.png" alt="">
+          <p>40,000 DKK ≈</p>
+        </div>
+        <div class="footer_block">
+          <img src="img/tractor.png" alt="">
+          <p>6 STK ≈</p>
+        </div>
+        <div class="footer_block">
+          <img src="img/cow.png" alt="">
+          <p>16 STK </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>

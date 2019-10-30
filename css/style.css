@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(120px, 10%) auto;
+  background-color: #4bb131;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+.header_mobile, .burger_menu {
+  display: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_button, .sidebar_button_active {
+  width: 100%;
+  height: 70px;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.sidebar_button_active {
+  color: #4bb131 !important;
+}
+
+.sidebar_logo img {
+  position: relative;
+  width: 90%;
+  left: 10%;
+}
+
+.page_content {
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  margin: 20px 20px 0 20px;
+  background-color: white;
+  height: calc(100vh - 20px);
+  width: calc(100% - 40px);
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "tips chart"
+    "footer footer";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% auto 10%;
+}
+
+.page_portrait {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.page_portrait img {
+  width: 100%;
+}
+
+.page_header {
+  position: relative;
+  grid-area: header;
+}
+
+.page_header h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+}
+
+.page_tips {
+  position: relative;
+  grid-area: tips;
+}
+
+.tips_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+}
+
+.tips_element {
+  position: relative;
+  display: grid;
+  grid-template-columns: 15% 80% 5%;
+  margin-top: 30px;
+}
+
+.tips_element:first-child {
+  margin: 0;
+}
+
+.tips_text {
+  /*color: #4bb131;*/
+  color: black;
+  font-size: 1.2vw;
+  padding-right: 5%;
+  font-weight: lighter;
+  align-self: center;
+}
+
+.tips_icon_container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.tips_icon {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info_icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+}
+
+.page_chart {
+  position: relative;
+  grid-area: chart;
+}
+
+.chart_container {
+  padding: 20px 40px 20px 20px;
+}
+
+.chart_title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.page_chart canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.page_footer {
+  position: relative;
+  grid-area: footer;
+}
+
+.footer_savings {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 50px;
+  font-size: 85%;
+}
+
+.footer_savings img {
+  position: relative;
+  margin: 0 5px 0 5px;
+  height: 50px;
+}
+
+.footer_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 50px;
+  align-items: center;
+}
+
+.footer_block>* {
+  display: inline;
+}
+
+.footer_savings p:first-child {
+  flex-shrink: 2;
+  line-height: normal;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px auto;
+    color: black;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header_mobile {
+    position: sticky;
+    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    z-index: 2;
+  }
+
+  .mobile_logo img {
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+    height: 120%;
+  }
+
+  .mobile_portrait {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: #ccc;
+  }
+
+  .mobile_portrait img {
+    width: 100%;
+  }
+
+  .page_portrait {
+    display: none;
+  }
+
+  .mobile_menu {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+  }
+
+  .burger_menu {
+    display: flex;
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    left: -50%;
+    transition-duration: 0.2s;
+  }
+
+  .mobile_menu:hover .burger_menu {
+    right: auto;
+    left: 0;
+    transition-duration: 0.2s;
+  }
+
+  .mobile_menu_button {
+    position: absolute;
+    color: white;
+    font-size: 70px;
+    left: 10px;
+  }
+
+  .sidebar_button, .sidebar_button_active {
+    width: 90%;
+  }
+
+  .page_header h1 {
+    font-size: 32px;
+  }
+
+  .page_content {
+    grid-template-areas:
+      "header"
+      "chart"
+      "tips"
+      "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px auto auto auto;
+    height: auto;
+  }
+
+  .tips_container {
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .tips_text {
+    /*color: #4bb131;*/
+    color: black;
+    font-size: 18px;
+    padding-right: 5%;
+    font-weight: lighter;
+  }
+
+  .chart_container {
+    padding: 20px 40px 20px 20px;
+  }
+
+  .chart_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .page_chart canvas {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page_footer {
+    margin-top: 20px;
+  }
+
+  .footer_savings {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    line-height: 50px;
+    height: auto;
+    right: auto;
+  }
+
+  .footer_savings img {
+    position: relative;
+    margin: 0 5px 0 5px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer_savings p {
+    text-align: center;
+    line-height: normal;
+  }
+}
